@@ -3744,12 +3744,16 @@
     </zeroOrMore>
   </define>
 
+  <define name="SinglePresExpression">
+    <choice>
+      <ref name="Presentation"/>
+      <ref name="ContInPres"/>
+    </choice>
+  </define>
+
   <define name="PresExpression">
     <zeroOrMore>
-      <choice>
-        <ref name="Presentation"/>
-        <ref name="ContInPres"/>
-      </choice>
+      <ref name="SinglePresExpression"/>
     </zeroOrMore>
   </define>
 
@@ -4221,7 +4225,8 @@
   <define name="mroot">
     <element name="mroot">
       <ref name="attlist-mroot"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4232,7 +4237,8 @@
   <define name="msub">
     <element name="msub">
       <ref name="attlist-msub"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4243,7 +4249,8 @@
   <define name="msup">
     <element name="msup">
       <ref name="attlist-msup"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4254,7 +4261,9 @@
   <define name="msubsup">
     <element name="msubsup">
       <ref name="attlist-msubsup"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4265,6 +4274,7 @@
   <define name="mmultiscripts">
     <element name="mmultiscripts">
       <ref name="attlist-mmultiscripts"/>
+      <ref name="SinglePresExpression"/>
       <ref name="PresExpression"/>
     </element>
   </define>
@@ -4276,7 +4286,8 @@
   <define name="munder">
     <element name="munder">
       <ref name="attlist-munder"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4287,7 +4298,8 @@
   <define name="mover">
     <element name="mover">
       <ref name="attlist-mover"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4298,7 +4310,9 @@
   <define name="munderover">
     <element name="munderover">
       <ref name="attlist-munderover"/>
-      <ref name="PresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
+      <ref name="SinglePresExpression"/>
     </element>
   </define>
 
@@ -4309,7 +4323,12 @@
   <define name="mtable">
     <element name="mtable">
       <ref name="attlist-mtable"/>
-      <ref name="PresExpression"/>
+      <oneOrMore>
+        <choice>
+          <ref name="mtr"/>
+          <ref name="mtd"/>
+        </choice>
+      </oneOrMore>
     </element>
   </define>
 
