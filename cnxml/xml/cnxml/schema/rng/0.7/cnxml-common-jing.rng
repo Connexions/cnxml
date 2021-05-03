@@ -101,11 +101,9 @@
   </define>
 
   <define name="metadata-extra-attributes" combine="interleave">
-    <optional>
-      <attribute name="mdml-version">
-        <value>0.5</value>
-      </attribute>
-    </optional>
+    <attribute name="mdml-version">
+      <value>0.5</value>
+    </attribute>
   </define>
 
 </grammar>

@@ -167,9 +167,7 @@
     <cnxml:para class="description">An element that contains a block of metadata pertaining to the containing collection.</cnxml:para>
     <element name="metadata">
       <ref name="col-common-attributes"/>
-      <optional>
-        <ref name="mdml-mdml-version-attribute"/>
-      </optional>
+      <ref name="mdml-mdml-version-attribute"/>
       <ref name="mdml-metadata-content"/>
     </element>
   </define>
@@ -342,18 +340,12 @@
         <ref name="url-attribute"/>
         <group>
           <ref name="document-attribute"/>
-          <optional>
-            <ref name="version-attribute"/>
-          </optional>
+          <ref name="version-attribute"/>
         </group>
       </choice>
-      <optional>
-        <ref name="col-repository-attribute"/>
-      </optional>
+      <ref name="col-repository-attribute"/>
       <ref name="sys-local-path-attribute"/>
-      <optional>
-        <ref name="sys-version-at-this-collection-version-attribute"/>
-      </optional>
+      <ref name="sys-version-at-this-collection-version-attribute"/>
       <interleave>
         <ref name="mdml-module-title"/>
         <optional>
