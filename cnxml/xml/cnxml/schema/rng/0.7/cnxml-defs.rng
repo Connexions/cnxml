@@ -905,11 +905,17 @@
 
   <define name="document">
     <element name="document">
-      <ref name="id-attribute"/><!-- Rename this object-id -->
+      <optional>
+        <ref name="id-attribute"/><!-- Rename this object-id -->
+      </optional>
       <ref name="common-attributes"/>
       <ref name="document-title"/>
-      <ref name="cnxml-version"/>
-      <attribute name="module-id"/>
+      <optional>
+        <ref name="cnxml-version"/>
+      </optional>
+      <optional>
+        <attribute name="module-id"/>
+      </optional>
       <optional>
         <ref name="metadata"/>
       </optional>
