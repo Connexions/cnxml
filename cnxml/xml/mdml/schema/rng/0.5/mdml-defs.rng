@@ -21,7 +21,9 @@
       <optional>
         <ref name="mdml-content-url"/>
       </optional>
-      <ref name="mdml-title"/>
+      <optional>
+        <ref name="mdml-title"/>
+      </optional>
       <optional>
         <ref name="mdml-short-title"/>
       </optional>
